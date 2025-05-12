@@ -8,6 +8,8 @@ const helmet = require('helmet');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 
+const authRoutes = require('./routes/authRoutes');
+
 dotenv.config();
 
 const app = express();
@@ -29,6 +31,10 @@ app.use(rateLimit({
     max: 100, // Limit each IP to 100 requests per windoMs
     message: 'Too many requests from this ip, please try again later'
 }));
+
+// Routes
+app.use('/api/auth', authRoutes);
+
 
 // Route to check server
 app.get('/', (req, res)=>{
