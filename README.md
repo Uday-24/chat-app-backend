@@ -23,15 +23,27 @@ This is a real-time chat application backend built with **Node.js**, **Express.j
 ## 📁 Project Structure
 
 chat-app-backend/
--├── controllers/ # Route logic
--├── models/ # Mongoose schemas
--├── routes/ # Express routes
--├── sockets/ # Socket.io setup
--├── middleware/ # Auth middleware
--├── config/ # DB and other config
--├── .env # Environment variables
--├── server.js # Entry point
--└── README.md
+├── config/              # MongoDB connection and environment config
+│
+├── controllers/         # Logic for handling requests (auth, chat, messages)
+│
+├── middleware/          # Middleware (e.g., JWT auth verification)
+│
+├── models/              # Mongoose schemas (User, Chat, Message)
+│
+├── routes/              # Route definitions for APIs
+│   ├── auth.routes.js
+│   ├── user.routes.js
+│   └── message.routes.js
+│
+├── sockets/             # Socket.io setup and event handling
+│
+├── .env                 # Environment variables (not pushed to GitHub)
+├── .gitignore           # Ignore node_modules, env, etc.
+├── server.js            # Entry point for the app
+├── package.json         # Project config and dependencies
+└── README.md            # Project documentation
+
 
 
 ## 📦 Installation
