@@ -23,15 +23,15 @@ This is a real-time chat application backend built with **Node.js**, **Express.j
 ## 📁 Project Structure
 
 chat-app-backend/
-├── controllers/ # Route logic
-├── models/ # Mongoose schemas
-├── routes/ # Express routes
-├── sockets/ # Socket.io setup
-├── middleware/ # Auth middleware
-├── config/ # DB and other config
-├── .env # Environment variables
-├── server.js # Entry point
-└── README.md
+-├── controllers/ # Route logic
+-├── models/ # Mongoose schemas
+-├── routes/ # Express routes
+-├── sockets/ # Socket.io setup
+-├── middleware/ # Auth middleware
+-├── config/ # DB and other config
+-├── .env # Environment variables
+-├── server.js # Entry point
+-└── README.md
 
 
 ## 📦 Installation
