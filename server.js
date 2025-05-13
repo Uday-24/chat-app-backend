@@ -9,8 +9,9 @@ const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const errorHandler = require('./utils/errorHandler');
 
-
 const authRoutes = require('./routes/authRoutes');
+const chatRoutes = require('./routes/chatRoutes');
+const messageRoutes = require('./routes/messageRoutes');
 
 dotenv.config();
 
@@ -39,6 +40,8 @@ app.use(errorHandler);
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/chat', chatRoutes);
+app.use('/api/message', messageRoutes);
 
 
 // Route to check server
