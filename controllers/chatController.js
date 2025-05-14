@@ -41,7 +41,7 @@ exports.fetchChat = async (req, res) => {
     try {
         const chats = await Chat.find({ users: req.user.userId })
             .populate('users', '-password')
-            .populate('groupAdmin', '-passwrod')
+            .populate('groupAdmin', '-password')
             .populate('latestMessage')
             .sort({ 'updatedAt': -1 });
 
